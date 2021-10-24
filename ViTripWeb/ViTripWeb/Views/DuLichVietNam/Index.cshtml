@@ -1,0 +1,124 @@
+﻿@model ViTripWeb.Models.DuLichVietNam
+
+@{
+    ViewData["Title"] = "Du lịch Đông Tây Bắc";
+}
+
+<main class="container py-5">
+    @section Banner
+    {
+        <div class="d-flex align-items-center" style="background: url(../@Model.BannerImage) no-repeat; height: 650px">
+            <div class="container">
+                <h2 class="text-white d-flex justify-content-center font-weight-bold text-center font-40 text-uppercase pb-4">@Model.Title</h2>
+                <p class="text-white text-center">@Model.Description</p>
+            </div>
+        </div>
+    }
+
+    <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb bg-light pl-0 mb-0">
+            <li class="breadcrumb-item"><a href="/">Trang chủ </a></li>
+            <li class="breadcrumb-item active" aria-current="page">Du lịch Việt Nam</li>
+        </ol>
+    </nav>
+    <section>
+        <div class="d-flex justify-content-between align-items-center py-2 tour-title">
+            <div>
+                <h4 class="text-uppercase font-weight-bold mb-0">@Model.Title</h4>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="btn-contact-tour">
+                    <a href="#">
+                        <i class="fab fa-wpforms"></i>
+                        <span class="pl-2">Liên hệ đặt tour</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="tour-content">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/sa-pa.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Sa Pa</h5>
+                            <div><a href="tour-sa-pa.html"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/sa-pa.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Sa Pa</h5>
+                            <div><a href="tour-sa-pa.html"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/sa-pa.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Sa Pa</h5>
+                            <div><a href="tour-sa-pa.html"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+            <!--<div class="row">
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/moc-chau.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Mộc Châu</h5>
+                            <div><a href=""><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/moc-chau.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Mộc Châu</h5>
+                            <div><a href=""><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/moc-chau.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Mộc Châu</h5>
+                            <div><a href=""><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!-- end row -->
+            <!--<div class="row">
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/moc-chau.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Mộc Châu</h5>
+                            <div><a href=""><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card text-white">
+                        <img class="card-img" src="~/images/dong-tay-bac/moc-chau.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title mb-0">Mộc Châu</h5>
+                            <div><a href=""><button class="btn btn-read-more">Xem thêm</button></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>-->
+            <!-- end row -->
+        </div>
+    </section>
+</main>

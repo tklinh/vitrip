@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>40716a45-554e-4212-848c-41a8d9d35ede</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+    <PackageReference Include="MySql.Data" Version="8.0.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\AnTuongVietNam\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\da-nang\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\con_dao\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\ha-long\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\ly-son\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\ha-giang\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\my-tho-chau-doc\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\ly-son-17\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\ha-giang-19\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\binh-lieu\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\da-lat-21\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\nam-du-can-tho\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\moc-chau-24\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\ta-xua\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\phu-quoc\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\thac-ban-gioc\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\suoi-giang-mu-cang-chai\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\thung-nai-mai-chau\" />
+    <Folder Include="wwwroot\images\an-tuong-vietnam\quang-binh\" />
+  </ItemGroup>
+
+</Project>

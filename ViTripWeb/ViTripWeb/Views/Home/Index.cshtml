@@ -1,0 +1,473 @@
+﻿@model ViTripWeb.Models.AnTuongVietNamDto
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_IndexLayout";
+}
+
+<header>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+        <a class="navbar-brand" href="/"><img src="~/images/home/Logo.png" alt=""></a>
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link text-white" href="about-us.html">Về vitrip.me <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle text-white" href="du-lich-viet-nam.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Du lịch Việt Nam
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/du-lich-vietnam/dong-tay-bac">Đông Tây Bắc</a>
+                        <a class="dropdown-item" href="/du-lich-vietnam/bien-dao">Biển Đảo</a>
+                        <a class="dropdown-item" href="/du-lich-vietnam/tay-nguyen">Tây Nguyên</a>
+                        <a class="dropdown-item" href="/du-lich-vietnam/mien-tay">Miền Tây</a>
+                    </div>
+                </li>
+                <li class="nav-item  px-2">
+                    <a class="nav-link text-white" href="mice-tour.html">Mice Tour</a>
+                </li>
+                <!--<li class="nav-item  px-2">
+                    <a class="nav-link text-white" href="tra-cuu-booking.html">Tra cứu Booking</a>
+                </li>-->
+                <li class="nav-item  px-2">
+                    <a class="nav-link text-white" href="tin-tuc.html">Tin tức</a>
+                </li>
+                <li class="nav-item  px-2">
+                    <a class="nav-link text-white" href="lien-he.html">Liên hệ</a>
+                </li>
+            </ul>
+            <div>
+                <img src="~/images/home/Language.png" alt="">
+                <div class="btn-login">
+                    <a href=""><img src="~/images/home/line.png" alt=""></a>
+                    <a href="" type="button" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="~/images/home/account-circle.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade bd-example-modal-lg index-login-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="row bg-white">
+                    <div class="col-md pl-0 pr-0">
+                        <img src="~/images/home/login-img.jpg" alt="" class="w-full">
+                    </div>
+                    <div class="col-md p-4">
+                        <div class="text-center">
+                            <img src="~/images/dong-tay-bac/Logo.svg" alt="">
+                            <h4 class="my-4">Chào mừng đến với Vitrip.me</h4>
+                            <p>Vui lòng điền thông tin đăng nhập</p>
+                        </div>
+                        <form action="" class="my-5">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên đăng nhập hoặc email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu" required>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Lưu lại</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary bg-blue-800">Đăng nhập</button>
+                            </div>
+                        </form>
+                        <div class="text-center">
+                            <a href="#">Đổi mật khẩu |</a>
+                            <a href="#">Lấy lại mật khẩu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zalo-chat-widget" data-oaid="311683456158616393" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="" data-height=""></div>
+    <div class="btn-call"><a href="tel:0393737072"><img src="~/images/action-button/phone.png" alt=""></a></div>
+    <div class="btn-email"><a href="mailto:sontv8@fpt.edu.vn"><img src="~/images/action-button/email-to.png" alt=""></a></div>
+    <script src="./src/sdkzalo.js"></script>
+
+
+    <form action="tao-tour.html" class="align-top-12 container">
+        <h2 class="text-white d-flex justify-content-center font-weight-bold text-center font-40">
+            Tour thiết kế dành
+            riêng cho bạn
+        </h2>
+        <select class="p-2 w-20 mx-auto my-4 bg-transparent-0 text-white d-flex justify-content-center border-white" id="birthday">
+            <option value="" hidden>Chọn địa điểm</option>
+            <option class="text-secondary">Đông Tây Bắc</option>
+            <option class="text-secondary">Biển Đảo</option>
+            <option class="text-secondary">Tây Nguyên</option>
+            <option class="text-secondary">Miền Tây</option>
+        </select>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-warning btn-send-request text-white bg-orange">Gửi yêu cầu</button>
+        </div>
+    </form>
+
+    <div class="content">
+        <div class="site-section bg-left-half mb-5">
+            <div class="container owl-2-style">
+                <h2 class="text-white text-center font-24">Tour hot trong tháng</h2>
+                <div class="owl-carousel owl-2">
+                    <div class="media-29101">
+                        <a href="#"><img src="~/images/home/chua-huong.png" alt="Image" class="img-fluid"></a>
+                        <h3 class="carousel-caption"><a href="#" class="text-white">Tour du lịch chùa hương</a></h3>
+                    </div>
+                    <div class="media-29101">
+                        <a href="#"><img src="~/images/home/chua-huong.png" alt="Image" class="img-fluid"></a>
+                        <h3 class="carousel-caption"><a href="#" class="text-white">Tour du lịch chùa hương</a></h3>
+                    </div>
+                    <div class="media-29101">
+                        <a href="#"><img src="~/images/home/chua-huong.png" alt="Image" class="img-fluid"></a>
+                        <h3 class="carousel-caption"><a href="#" class="text-white">Tour du lịch chùa hương</a></h3>
+                    </div>
+                    <div class="media-29101">
+                        <a href="#"><img src="~/images/home/chua-huong.png" alt="Image" class="img-fluid"></a>
+                        <h3 class="carousel-caption"><a href="#" class="text-white">Tour du lịch chùa hương</a></h3>
+                    </div>
+                    <div class="media-29101">
+                        <a href="#"><img src="~/images/home/chua-huong.png" alt="Image" class="img-fluid"></a>
+                        <h3 class="carousel-caption"><a href="#" class="text-white">Tour du lịch chùa hương</a></h3>
+                    </div>
+                    <div class="media-29101">
+                        <a href="#"><img src="~/images/home/chua-huong.png" alt="Image" class="img-fluid"></a>
+                        <h3 class="carousel-caption"><a href="#" class="text-white">Tour du lịch chùa hương</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end header -->
+<main>
+    <div class="container">
+        <div class="an-tuong">
+            <div class="text-center">
+                <h2 class="text-blue-800 font-weight-bold">Ấn tượng Việt Nam</h2>
+                <p>Những Địa điểm du Lịch nổi tiếng tại Việt Nam mà bạn chắc chắc sẽ rất thích</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md">
+                    <div id="carouselImpressIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <ul class="story-tabs mb-0">
+                            @{
+                                int index = 0;
+                                bool isFirstGroup = true;
+
+                                foreach (var category in Model.AnTuongVietNamList)
+                                {
+                                    <li data-target="#carouselImpressIndicators" data-slide-to="@index" class="active">@category.Title</li>
+                                    index++;
+                                }
+                            }
+                        </ul>
+                        <div class="carousel-inner an-tuong-carousel">
+                            @foreach (var category in Model.AnTuongVietNamList)
+                            {
+                                var tourIndex = 0;
+                                var tours = Model.Tours.Where(t => t.GroupId == category.Id).ToList();
+                                if (tours.Count > 0)
+                                {
+                                    <div class="tour-content carousel-item @(isFirstGroup ? "active" : "")">
+                                        <div class="row">
+                                            @while (tourIndex < 3 && tourIndex < tours.Count)
+                                            {
+                                                var tour = tours[tourIndex];
+                                                tourIndex++;
+
+                                                <div class="col-sm">
+                                                    <div class="card text-white">
+                                                        <img class="card-img" src="~/images/an-tuong-vn/ha-noi.jpg" alt="Card image">
+                                                        <div class="card-img-overlay">
+                                                            <h5 class="card-title mb-0">@tour.Name</h5>
+                                                            <div><a href="@tour.Url"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                        
+                                        @if (tours.Count > 3)
+                                        { 
+                                            <div class="row">
+                                                @while (tourIndex < 6 && tourIndex < tours.Count)
+                                                {
+                                                    var tour = tours[tourIndex];
+                                                    tourIndex++;
+
+                                                    <div class="col-sm">
+                                                        <div class="card text-white">
+                                                            <img class="card-img" src="~/images/an-tuong-vn/ha-noi.jpg" alt="Card image">
+                                                            <div class="card-img-overlay">
+                                                                <h5 class="card-title mb-0">@tour.Name</h5>
+                                                                <div><a href="@tour.Url"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        }
+                                        
+                                    </div>
+                                }
+                                isFirstGroup = false;
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-light border border-info px-4 view-all">Tất cả tour</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- kết thúc khối ấn tượng -->
+    <div class="reason container-fluid">
+        <div class="container text-center text-white">
+            <h2 class="font-weight-bold">
+                Lí do nên chọn Vitrip.me
+            </h2>
+            <p>Những lí do mà bạn hoàn toàn có thể yên tâm, khi chọn lựa Vitrip.me</p>
+        </div>
+        <div class="container mt-4">
+            <div class="row mt-4">
+                <div class="col-sm text-center text-white">
+                    <img src="~/images/home/place.svg" class="img-fluid" alt="Responsive image">
+                    <h4 class="">Địa điểm phù hợp</h4>
+                    <p>
+                        Với trên 10 năm kinh nghiệm làm du lịch, chúng tôi sẵn sàng tư vấn cho Quý Khách những điểm
+                        đến hợp lý và lịch trình phù hợp nhất cho quỹ thời gian của Quý Vị
+                    </p>
+                </div>
+                <div class="col-sm text-center text-white">
+                    <img src="~/images/home/cost.svg" class="img-fluid" alt="Responsive image">
+                    <h4 class="">Chi phí hợp lý</h4>
+                    <p>
+                        Cung cấp mức giá hợp lý nhất với hành trình và dịch vụ tốt nhất trong khả năng. "Không có
+                        cách tiêu tiền nào tốt hơn là tiêu tiền đi du lịch."
+                    </p>
+                </div>
+                <div class="col-sm text-center text-white">
+                    <img src="~/images/home/time.svg" class="img-fluid" alt="Responsive image">
+                    <h4 class="">Triết lý hoạt động</h4>
+                    <p>
+                        Song hành cùng du khách với TÂM – TÍN – THIỆN
+                        Tâm: khách hàng là người thân, chuyến đi là giá trị
+                        Tín: uy tín trong từng dịch vụ, hợp lý trong từng sản phẩm Thiện: hướng thiện trong từng
+                        hành trình
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm text-center text-white">
+                    <img src="~/images/home/room-booking.svg" class="img-fluid" alt="Responsive image">
+                    <h4 class="">Đặt phòng nhanh chóng</h4>
+                    <p>
+                        Đặt phòng nhanh chóng chỉ bằng một vài cú nhấp chuột. Chúng tôi lo tất cả các phương tiện đi
+                        lại và chỗ ở trong suốt hành trình của bạn.
+                    </p>
+                </div>
+                <div class="col-sm text-center text-white">
+                    <img src="~/images/home/support.svg" class="img-fluid" alt="Responsive image">
+                    <h4 class="">Đội ngũ hỗ trợ</h4>
+                    <p>
+                        Chúng tôi có nhân viên hỗ trợ trong tất cả các khâu trong kỳ nghỉ của bạn, từ tư vấn du lịch
+                        & giá cả tốt nhất đến hỗ trợ và xử lý mặt đất trong kỳ nghỉ của bạn.
+                    </p>
+                </div>
+                <div class="col-sm text-center text-white">
+                    <img src="~/images/home/story.svg" class="img-fluid" alt="Responsive image">
+                    <h4 class="">Chia sẻ câu chuyện</h4>
+                    <p>
+                        Hãy cùng chúng tôi viết nên câu chuyện của bạn để hoài niệm, để sẻ chia những khoảnh khắc
+                        tuyệt vời của chuyến đi - Tell Your Stories
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" pt-5 pb-5">
+        <div class="container ">
+            <div class="text-center">
+                <h2 class="text-blue-800 font-weight-bold">Tell Your Stories</h2>
+                <p>Cùng xem lại những kỉ niệm của khách hàng trong các chuyến du Lịch cùng Vitrip.me </p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div id="carouselStoryIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <!--<ul class="story-tabs mb-0">
+                            <li data-target="#carouselStoryIndicators" data-slide-to="0" class="active">Ảnh</li>
+                            <li data-target="#carouselStoryIndicators" data-slide-to="1">Video</li>
+                        </ul>-->
+                        <div class="carousel-inner story-content">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <img src="~/images/home/stories-1.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm-4 d-flex align-content-between flex-wrap">
+                                        <img src="~/images/home/stories-2.jpg" class="img-fluid" alt="Responsive image">
+                                        <img src="~/images/home/stories-3.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <img src="~/images/home/stories-4.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm">
+                                        <img src="~/images/home/stories-5.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm">
+                                        <img src="~/images/home/stories-6.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <button class="btn btn-light border border-info px-4 view-all">
+                                        Xem tất
+                                        cả
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <img src="~/images/home/stories-1.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm-4 d-flex align-content-between flex-wrap">
+                                        <img src="~/images/home/stories-2.jpg" class="img-fluid" alt="Responsive image">
+                                        <img src="~/images/home/stories-3.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <img src="~/images/home/stories-4.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm">
+                                        <img src="~/images/home/stories-5.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                    <div class="col-sm">
+                                        <img src="~/images/home/stories-6.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <button class="btn btn-light border border-info px-4 view-all">
+                                        Xem tất
+                                        cả
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end story -->
+    <div class=" pt-5 pb-6 bg-gray-200">
+        <div class="container customer-feedback">
+            <div class="text-center">
+                <h2 class="text-blue-800 font-weight-bold">Đánh giá của khách hàng</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-box d-flex">
+                                            <div class="img-area">
+                                                <img src="~/images/home/testimonial.png" alt="">
+                                            </div>
+                                            <div class="img-text ml-4">
+                                                <img src="~/images/home/star.png" alt="" class="mb-4">
+                                                <p>
+                                                    Tôi đã tìm được cho mình một Tour Du Lịch thật tuyệt vời, cám ơn
+                                                    Vitrip.me về dịch vụ của các bạn.
+                                                    Tôi sẽ còn quay lại vào lần sau
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-box d-flex">
+                                            <div class="img-area">
+                                                <img src="~/images/home/testimonial.png" alt="">
+                                            </div>
+                                            <div class="img-text ml-4">
+                                                <img src="~/images/home/star.png" alt="" class="mb-4">
+                                                <p>
+                                                    Tôi đã tìm được cho mình một Tour Du Lịch thật tuyệt vời, cám ơn
+                                                    Vitrip.me về dịch vụ của các bạn.
+                                                    Tôi sẽ còn quay lại vào lần sau
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="single-box d-flex">
+                                            <div class="img-area">
+                                                <img src="~/images/home/testimonial.png" alt="">
+                                            </div>
+                                            <div class="img-text ml-4">
+                                                <img src="~/images/home/star.png" alt="" class="mb-4">
+                                                <p>
+                                                    Tôi đã tìm được cho mình một Tour Du Lịch thật tuyệt vời, cám ơn
+                                                    Vitrip.me về dịch vụ của các bạn.
+                                                    Tôi sẽ còn quay lại vào lần sau
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="single-box d-flex">
+                                            <div class="img-area">
+                                                <img src="~/images/home/testimonial.png" alt="">
+                                            </div>
+                                            <div class="img-text ml-4">
+                                                <img src="~/images/home/star.png" alt="" class="mb-4">
+                                                <p>
+                                                    Tôi đã tìm được cho mình một Tour Du Lịch thật tuyệt vời, cám ơn
+                                                    Vitrip.me về dịch vụ của các bạn.
+                                                    Tôi sẽ còn quay lại vào lần sau
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end testimonial -->
+    <div class="container mt-5 mb-5">
+        <div class="text-center">
+            <h2 class="text-blue-800 font-weight-bold">Đối tác của chúng tôi</h2>
+        </div>
+        <div class="text-center mt-5">
+            <img src="~/images/home/partner.svg" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+    <!-- end partner -->
+</main>

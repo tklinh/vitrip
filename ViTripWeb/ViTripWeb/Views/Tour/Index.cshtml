@@ -1,0 +1,212 @@
+﻿@model ViTripWeb.Models.TourDetailDto
+
+@{
+    ViewData["Title"] = "Ấn tượng Việt Nam - " + Model.TourInfo.Title;
+}
+
+@section Banner
+{
+    <div class="d-flex align-items-center" style="background: url(../images/mien-tay/banner.jpg) no-repeat; height: 650px">
+        <div class="container">
+            <h2 class="text-white d-flex justify-content-center font-weight-bold text-center font-40 text-uppercase pb-4">Ấn tượng Việt Nam</h2>
+            <p class="text-white text-center">@Model.TourInfo.Description</p>
+        </div>
+    </div>
+}
+
+<main class="container py-5">
+    <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb bg-light pl-0 mb-0">
+            <li class="breadcrumb-item"><a href="/">Trang chủ </a></li>
+            <li class="breadcrumb-item"><a href="#">Ấn tượng Việt Nam</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.TourInfo.Name</li>
+        </ol>
+    </nav>
+    <section>
+        <section>
+            <div class="container pt-4">
+                <div class="row bg-orange p-2 text-white">@Model.TourInfo.Title</div>
+                <div class="row py-2 border-orange">
+                    <div class="col-md-4">
+                        <img src="~/@Model.TourInfo.ThumnailUrl" alt="" class="w-full">
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text-orange font-weight-bold"><img src="./images/tour-ha-long/metro-airplane.svg" alt=""> Khởi hành từ: @Model.TourInfo.From</p>
+                        <p>Lịch khởi hành: @Model.TourInfo.Schedule</p>
+                        <p>Thời gian: @Model.TourInfo.Duration</p>
+                        <p>Phương tiện: @Model.TourInfo.Vehicle</p>
+                        <p>Điểm thăm quan: @Model.TourInfo.Locations</p>
+                        <div class="btn-contact-tour">
+                            <a href="#">
+                                <i class="fab fa-wpforms"></i>
+                                <span class="pl-2">Liên hệ đặt tour</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-4"><i>@Model.TourInfo.Description</i></div>
+
+            <div id="carouselImpressIndicators" class="carousel slide mt-4" data-ride="carousel" data-interval="false">
+                <ul class="story-tabs mb-0">
+                    <li data-target="#carouselImpressIndicators" data-slide-to="0" class="active">Lịch trình tour</li>
+                    <li data-target="#carouselImpressIndicators" data-slide-to="1">Ảnh hành trình</li>
+                    <li data-target="#carouselImpressIndicators" data-slide-to="2">Giá bao gồm</li>
+                    <li data-target="#carouselImpressIndicators" data-slide-to="3">Giá không bao gồm</li>
+                </ul>
+                <div class="carousel-inner an-tuong-carousel">
+                    <!-- Lịch trình tour -->
+                    <div class="carousel-item py-4 active">
+                        <h3>LỊCH TRÌNH TOUR</h3>
+                        @Html.Raw(Model.TourInfo.Content)                        
+                        <p style="text-align: center;"><b>VITRIP hẹn gặp lại Quý khách ở những chương trình tiếp theo!</b></p>
+                        <p>
+                            <b>LƯU Ý:</b>
+                            <ul>
+                                <li>Lịch trình có thể thay đổi tùy theo điều kiện thực tế</li>
+                                <li>Giá trên chỉ áp dụng cho khách mang quốc tịch Việt Nam</li>
+                                <li>Giá tour áp dụng cho khách đoàn và không áp dụng cho dịp Lễ, Tết</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <!-- Ảnh hành trình -->
+                    <div class="carousel-item">
+                        @if (Model.Images.Count > 0)
+                        {
+                            int index = 0;
+                            foreach (var image in Model.Images)
+                            {
+                                if (index % 4 == 0)
+                                {
+                                    @Html.Raw("<div class='row'>")
+                                }
+
+                                <div class="col-sm">
+                                    <div class="card text-white">
+                                        <img class="card-img" src="~/@image.Url" alt="Card image">
+                                    </div>
+                                </div>
+
+                                if (index % 4 == 3)
+                                {
+                                    @Html.Raw("</div>")
+                                }
+                                index++;
+                            }
+                            if (index % 4 != 0)
+                            {
+                                while (index % 4 != 3)
+                                {
+                                    <div class="col-sm"></div>
+
+                                    index++;
+                                }
+                                <div class="col-sm"></div>
+                                @Html.Raw("</div>")
+                            }
+                        }
+                    </div>
+
+                    <!-- giá bao gồm -->
+                    <div class="carousel-item">
+                        <div class="py-4">
+                            @foreach (var item in Model.Includes)
+                            {
+                                <p><i class="fas fa-check text-main"></i> @item.Content</p>
+                            }
+                        </div>
+                    </div>
+
+                    <!-- giá không bao gồm -->
+                    <div class="carousel-item">
+                        <div class="py-4">
+                            @foreach (var item in Model.Excludes)
+                            {
+                                <p><i class="far fa-window-close text-danger"></i> @item.Content</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="suggestions">
+            <div class="mt-5">
+                <h4 class="text-uppercase font-weight-bold mb-0">Có thể bạn quan tâm</h4>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        @if (Model.RelatedTours.Count > 0)
+                        {
+                            int index = 0;
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                @if (Model.RelatedTours.Count > 3)
+                                {
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                }                                
+                            </ol>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        @while (index < 3 && index < Model.RelatedTours.Count)
+                                        {
+                                            var tour = Model.RelatedTours[index];
+
+                                            <div class="col-sm">
+                                                <div class="card text-white">
+                                                    <img class="card-img" src="~/@tour.ThumnailUrl" alt="Card image">
+                                                    <div class="card-img-overlay">
+                                                        <h5 class="card-title">@tour.Name</h5>
+                                                        <div><a href="/@tour.Url"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            index++;
+                                        }
+                                    </div>
+                                </div>
+
+                                @if (Model.RelatedTours.Count > 3)
+                                {
+                                    <div class="carousel-item">
+                                        <div class="row">
+                                            @while (index < 6 && index < Model.RelatedTours.Count)
+                                            {
+                                                var tour = Model.RelatedTours[index];
+
+                                                <div class="col-sm">
+                                                    <div class="card text-white">
+                                                        <img class="card-img" src="~/@tour.ThumnailUrl" alt="Card image">
+                                                        <div class="card-img-overlay">
+                                                            <h5 class="card-title">@tour.Name</h5>
+                                                            <div><a href="/@tour.Url"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                index++;
+                                            }
+                                            @while (index < 6)
+                                            {
+                                                <div class="col-sm">
+                                                </div>
+
+                                                index++;
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>

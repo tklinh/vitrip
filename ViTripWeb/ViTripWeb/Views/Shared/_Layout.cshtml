@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ViTripWeb</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- slide -->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/app.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="~/js/jquery.rotateSlider.js"></script>
+    <script src="~/js/app.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/sub-page.css">
+    <link rel="stylesheet" href="~/css/offcanvas.css">
+</head>
+<body class="p-0">
+    <section class="header">
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light px-4">
+            <a class="navbar-brand" href="/"><img src="~/images/dong-tay-bac/Logo.svg" alt=""></a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="about-us.html">Về vitrip.me <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle" href="du-lich-viet-nam.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Du lịch Việt Nam
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/du-lich-vietnam/dong-tay-bac">Đông Tây Bắc</a>
+                            <a class="dropdown-item" href="/du-lich-vietnam/bien-dao">Biển Đảo</a>
+                            <a class="dropdown-item" href="/du-lich-vietnam/tay-nguyen">Tây Nguyên</a>
+                            <a class="dropdown-item" href="/du-lich-vietnam/mien-tay">Miền Tây</a>
+                        </div>
+                    </li>
+                    <li class="nav-item  px-2">
+                        <a class="nav-link" href="mice-tour.html">Mice Tour</a>
+                    </li>
+                    <!--<li class="nav-item  px-2">
+                        <a class="nav-link" href="tra-cuu-booking.html">Tra cứu Booking</a>
+                    </li>-->
+                    <li class="nav-item  px-2">
+                        <a class="nav-link" href="tin-tuc.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item  px-2">
+                        <a class="nav-link" href="lien-he.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div>
+                    <img src="~/images/dong-tay-bac/Language.svg" alt="">
+                    <div class="btn-login">
+                        <a href=""><img src="~/images/home/line.png" alt=""></a>
+                        <a href="" type="button" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="~/images/home/account-circle.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade bd-example-modal-lg index-login-modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="row bg-white">
+                        <div class="col-md pl-0 pr-0">
+                            <img src="~/images/home/login-img.jpg" alt="" class="w-full">
+                        </div>
+                        <div class="col-md p-4">
+                            <div class="text-center">
+                                <img src="~/images/dong-tay-bac/Logo.svg" alt="">
+                                <h4 class="my-4">Chào mừng đến với Vitrip.me</h4>
+                                <p>Vui lòng điền thông tin đăng nhập</p>
+                            </div>
+                            <form action="" class="my-5">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên đăng nhập hoặc email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu" required>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Lưu lại</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary bg-blue-800">Đăng nhập</button>
+                                </div>
+                            </form>
+                            <div class="text-center">
+                                <a href="#">Đổi mật khẩu |</a>
+                                <a href="#">Lấy lại mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./src/offcanvas.js"></script>
+
+        @RenderSection("Banner",false)
+    </section>
+    <!-- end header -->
+
+    @RenderBody()
+
+    <footer class="py-5 bg-main index-footer">
+        <div class="container text-white">
+            <div class="pb-4 footer-logo"><img src="~/images/home/Logo.png" alt=""></div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="font-weight-bold">
+                        Công Ty Cổ Phần Dịch Vụ
+                        Truyền Thông & Du Lịch VITRIP
+                    </h6>
+                    <div class="d-flex">
+                        <span class="material-icons pr-2">
+                            location_on
+                        </span>
+                        <p>
+                            B43 Lô 6, khu đô thị mới Định Công, Phường Định Công, quận Hoàng Mai, Thành phố Hà Nội, Việt
+                            Nam.
+                        </p>
+                    </div>
+                    <div class="d-flex">
+                        <span class="material-icons pr-2">
+                            receipt_long
+                        </span>
+                        <p>
+                            Giấy phép ĐKKD
+                            Giấy phép Dịch vụ Lữ Hành Quốc tế
+                        </p>
+                    </div>
+                    <div class="d-flex">
+                        <span class="material-icons pr-2">
+                            phone_in_talk
+                        </span>
+                        <p>0914525588</p>
+                    </div>
+                    <div class="d-flex">
+                        <span class="material-icons pr-2">
+                            email
+                        </span>
+                        <p>info@vitrip.me</p>
+                    </div>
+                </div>
+                <!-- end col-1 -->
+                <div class="col-md-3">
+                    <h6 class="font-weight-bold">Dành cho khách hàng</h6>
+                    <p><a href="huong-dan-thanh-toan.html" class="text-white">Hướng dẫn thanh toán</a></p>
+                    <p><a href="ban-quyen-hinh-anh.html" class="text-white">Bản quyền hình ảnh</a></p>
+                    <p><a href="chuan-bi-truoc-chuyen-di.html" class="text-white">Chuẩn bị trước chuyến đi</a></p>
+                    <p><a href="chinh-sach-dieu-khoan.html" class="text-white">Chính sách và điều khoản chung</a></p>
+                </div>
+                <!-- end col-2 -->
+                <div class="col-md-3">
+                    <h6 class="font-weight-bold">Kết nối với chúng tôi</h6>
+                    <div class="social-link text-center">
+                        <a href="" class="px-2"><img src="~/images/home/fb-icon.svg" alt=""></a>
+                        <a href="" class="px-2"><img src="~/images/home/youtube-icon.svg" alt=""></a>
+                    </div>
+                </div>
+                <!-- end col-3 -->
+                <div class="col-md-3">
+                    <h6 class="font-weight-bold">Đăng ký nhận ưu đãi từ Vitrip.me</h6>
+                    <p>Nhập email của bạn, để nhận nhiều ưu đãi, và các chương trình mới từ chúng tôi</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" required>
+                        </div>
+                        <button type="submit" class="btn btn-white text-main font-weight-bold font-14 d-block ml-auto">
+                            Gửi cho
+                            tôi
+                        </button>
+                    </form>
+                </div>
+                <!-- end col-4 -->
+            </div>
+        </div>
+        <hr class="bg-white">
+        <div class="container">
+            <div class="row flex justify-content-between">
+                <div class="">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white " href="#">© 2021 Vitrip.me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Quyền riêng tư</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Điều khoản</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Sơ đồ trang web</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <img src="~/images/home/footer-language.png" class="" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- responsive navbars -->
+    <script src="./src/offcanvas.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            "use strict";
+
+            var navclone = function () {
+                $(".js-clone-nav").each(function () {
+                    var $this = $(this);
+                    $this.clone().attr("class", "clone-view").appendTo(".mobile-view-body");
+                });
+
+                $("body").on("click", ".js-toggle", function (e) {
+                    var $this = $(this);
+                    e.preventDefault();
+
+                    if ($("body").hasClass("off-view")) {
+                        $("body").removeClass("off-view");
+                    } else {
+                        $("body").addClass("off-view");
+                    }
+                });
+
+                $(document).mouseup(function (e) {
+                    var container = $(".mobile-view");
+                    if (!container.is(e.target) && container.has(e.target).length === 0) {
+                        if ($("body").hasClass("off-view")) {
+                            $("body").removeClass("off-view");
+                        }
+                    }
+                });
+
+                $(window).resize(function () {
+                    var $this = $(this),
+                        w = $this.width();
+                    if (w > 768) {
+                        if ($("body").hasClass("off-view")) {
+                            $("body").removeClass("off-view");
+                        }
+                    }
+                });
+            };
+            navclone();
+        });
+    </script>
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

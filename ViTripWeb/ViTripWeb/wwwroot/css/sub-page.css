@@ -1,0 +1,441 @@
+.banner{
+    background: url(../images/dong-tay-bac/banner_1.jpg) no-repeat;
+    height: 650px;
+}
+.banner-bien-dao{
+    background: url(../images/bien-dao/banner_1.jpg) no-repeat;
+    height: 650px;
+}
+.banner-tay-nguyen{
+    background: url(../images/tay-nguyen/banner_1.png) no-repeat;
+    height: 650px;
+}
+.banner-mien-tay{
+    background: url(../images/mien-tay/banner.jpg) no-repeat;
+    height: 650px;
+}
+.banner-tao-tour{
+    background: url(../images/tao-tour/banner.jpg) no-repeat;
+    height: 650px;
+}
+.banner-mice-tour{
+    background: url(../images/mice-tour/banner.jpg) no-repeat;
+    height: 650px;
+}
+.banner-about-us{
+    background: url(../images/about-us/banner.jpg) no-repeat;
+    height: 650px;
+}
+.thu-ngo{
+    background: url(../images/about-us/thu-ngo.jpg) no-repeat;
+    width: 100%;
+    box-shadow: 2px 2px 15px #a8a8a8;
+}
+.banner-tin-tuc{
+    background: url(../images/tin-tuc/banner.jpg) no-repeat;
+    height: 650px;
+}
+.banner-lien-he{
+    background: url(../images/lien-he/banner.jpg) no-repeat;
+    height: 650px;
+}
+.banner-tra-cuu{
+    background: url(../images/tra-cuu-booking/banner.jpg) no-repeat;
+    height: 650px;
+}
+.sub-banner{
+    max-height: 486px;
+}
+/* ----------------- cung duong dong tay bac ----------------- */
+.btn-tour-guide, .btn-contact-tour{
+    width: 14rem;
+    padding: 8px 0;
+    border-radius:5rem;
+    text-align: center;
+    color: #FFA30B;
+    border: 1px solid #FFA30B;
+}
+.btn-tour-guide a, .btn-contact-tour a{
+    text-decoration: none;
+    color: #FFA30B;
+}
+.btn-tour-guide:hover, .btn-tour-guide:hover a, .btn-contact-tour:hover, .btn-contact-tour:hover a{
+    background-color: #FFA30B;
+    color: white;
+}
+.tour-content .row{
+    padding-top: 2rem;
+}
+.tour-content .row .col-sm .card-img-overlay{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+@media only screen and (max-width: 768px){
+    .tour-title{
+        display: flex;
+        flex-direction: column;
+    }
+    .tour-title h4{
+        font-size: 20px;
+        padding: 2rem 0;
+    }
+    .tour-content .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 1rem;
+    }
+    .tour-content .row .col-sm{
+        padding: 0 0.5rem;
+    }
+    .tour-content .row .col-sm .card-img-overlay{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: center;
+    }
+    .tour-content h5{
+        font-size: 14px;
+    }
+    .tour-content .btn-read-more{
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-size: 12px;
+    }
+    .tour-title .btn-contact-tour, .tour-title .btn-tour-guide{
+        font-size: 12px;
+        width: 11rem;
+    }
+}
+/* ----------------- bien dao ----------------- */
+.btn-read-more{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.btn-read-more:hover{
+    background-color: white;
+    color: #FFA30B;
+}
+.tour-content .card{
+    transition: .5s ease-in-out;
+}
+.tour-content .card:hover{
+    transform: scale(105%);
+    transition: .5s ease-in-out;
+    box-shadow: 4px 4px 15px #a8a8a8;
+    border: none;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+/* ----------------- tay nguyen ----------------- */
+.suggestions .row .col-sm .card-img-overlay{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.suggestions .card-title{
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 768px){
+    .suggestions h4{
+        text-align: center;
+        font-size: 20px;
+    }
+    .suggestions .carousel-inner .carousel-item{
+        /* overflow: unset; */
+        padding: 0 0.5rem;
+    }
+    .suggestions .carousel-item .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .suggestions .row .col-sm{
+        padding: 0 0.5rem;
+    }
+    .suggestions .row .col-sm .card-img-overlay{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: center;
+    }
+    .suggestions h5{
+        font-size: 14px;
+    }
+    .suggestions .btn-read-more{
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-size: 12px;
+    }
+}
+
+/* ----------------- tao tour ----------------- */
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 20px 0;
+    width: 100%;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #FFA30B;
+    border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FFA30B;
+}
+.range-wrap{
+    position: relative;
+}
+.range-value{
+    position: absolute;
+    top: -50%;
+}
+.range-value span{
+    width: 30px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #FFA30B;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 6px;
+}
+.range-value span:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #FFA30B;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -1px;
+}
+
+/* co so luu tru */
+.fa-star{
+    color: #FFA30B;
+}
+input[type=radio]:checked + label {
+    border: none;
+} 
+input[type=radio]:checked {
+    border: 1px solid red;
+} 
+.btn-send-info:hover{
+    background-color: #ff6d0b;
+}
+
+@media only screen and (max-width: 768px){
+    .form-create-tour .form-group label{
+        font-size: 14px;
+    }
+    .form-create-tour .form-group input, .form-create-tour .form-group p, .form-create-tour .form-group select, .form-check-label{
+        font-size: 12px;
+    }
+    .form-create-tour .form-group h6{
+        font-size: 14px;
+    }
+    .co-so-luu-tru .row{
+        padding: 0 1rem;
+    }
+    .co-so-luu-tru .row .col{
+        padding: 0 1rem;
+    }
+}
+
+/* ----------------- mice tour ----------------- */
+
+.business-key p, .business-key h6{
+    font-size: 12px;
+}
+.business-key .row{
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+@media only screen and (max-width: 768px){
+    .mice-tour-content{
+        padding: 0 0.5rem;
+    }
+    .business-key .row{
+        display: block;
+        padding: 1rem;
+    }
+    .business-key .info{
+        padding: 2rem 0;
+    }
+    .business-key .img {
+        padding: 1rem 0;
+    }
+    .mice-tour-content h5{
+        display: none;
+    }
+    .mice-tour-content h6{
+        font-size: 14px;
+    }
+}
+
+/* ----------------- about us ----------------- */
+.thu-ngo{
+    margin-top: 3rem;
+    padding: 2rem;
+}
+.thu-ngo p{
+    font-size: 12px;
+}
+@media only screen and (max-width: 768px){
+    .thu-ngo{
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    .thu-ngo p{
+        font-size: 10px;
+    }
+}
+/* .su-menh{
+    background: url(../images/about-us/su-menh.jpg) no-repeat;
+    border-radius: 0.5rem;
+}
+.triet-ly{
+    background: url(../images/about-us/triet-ly-hoat-dong.jpg) no-repeat;
+}
+.tam-nhin{
+    background: url(../images/about-us/tam-nhin.jpg) no-repeat;
+} */
+
+/* ----------------- liên hệ ----------------- */
+.tru-so .btn-warning{
+    border: 1px solid #FFA30B;
+    background-color: transparent;
+    color: #000000;
+}
+.tru-so .btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle{
+    background-color: #FFA30B;
+    border: 1px solid #FFA30B;
+    border-radius: 0.2rem;
+    color: #ffffff;
+}
+.tru-so .btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child), .tru-so .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle){
+    border-radius: 0.2rem;
+}
+.tru-so label{
+    margin-right: 2rem;
+}
+.contact-title{
+    padding: 2rem 0;
+}
+.contact-content .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 768px){
+    .contact-title{
+        text-align: center;
+        font-size: 20px;
+    }
+    .contact-content .row{
+        display: block;
+    }
+    .tru-so h5{
+        padding: 1rem 0;
+    }
+}
+
+/* ----------------- tra cứu booking ----------------- */
+
+#tour-code{
+    background-color: transparent;
+}
+#tour-code::placeholder{
+    color: white;
+}
+.booking-info td{
+    padding: 0.5rem;
+}
+.booking-info-title{
+    margin-bottom: 2rem;
+}
+.booking-info .card-title{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+.booking-info .card-img-overlay{
+    padding: 0 6rem;
+    font-size: 14px;
+    margin-top: 8rem;
+}
+.booking-info .tour-code{
+    display: inline-block;
+    padding: 0.25rem 1.5rem;
+    width: 10rem;
+    margin: 1rem 0;
+}
+.booking-info .thank{
+    margin: 2rem 0;    
+}
+.condition-content{
+    font-size: 14px;
+}
+@media only screen and (max-width: 768px){
+    .booking-info{
+        overflow: scroll;
+    }
+    .booking-info .card-img-overlay{
+        padding: 0 2rem;
+        font-size: 10px;
+        margin-top: 3rem;
+    }
+    .booking-info-title{
+        margin-bottom: 1rem;
+    }
+    .booking-info .card-title{
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .booking-info .tour-code{
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        width: 10rem;
+        margin: 0.5rem 0;
+    }
+    .booking-info td{
+        padding: 0.2rem;
+    }
+    .booking-info td p{
+        font-size: 10px;
+        margin-bottom: 0.2rem;
+    }
+    .booking-info .thank{
+        margin: 1rem 0;
+        font-size: 10px;
+    }
+    .condition-content{
+        font-size: 10px;
+    }
+}
