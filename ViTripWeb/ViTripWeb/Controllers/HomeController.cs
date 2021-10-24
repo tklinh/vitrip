@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 using System;
@@ -14,10 +15,14 @@ namespace ViTripWeb.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private IConfiguration Configuration;
+        private string connectionString = string.Empty;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IConfiguration _configuration)
         {
             _logger = logger;
+            Configuration = _configuration;
+            connectionString = this.Configuration.GetConnectionString("VitripDb");
         }
 
         public IActionResult Index()
@@ -25,7 +30,7 @@ namespace ViTripWeb.Controllers
             List<AnTuongVietNam> catogories = new List<AnTuongVietNam>();
             List<TourDetail> tours = new List<TourDetail>();
 
-            using (var connection = new MySqlConnection("Server=10.1.144.4;Database=vitripdb;Uid=vitrip;Pwd=vitrip;SslMode=none"))
+            using (var connection = new MySqlConnection(connectionString))
             {
                 catogories = connection.Query<AnTuongVietNam>($"SELECT * FROM tbl_an_tuong_vietnam").ToList();
 

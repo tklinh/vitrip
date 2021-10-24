@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,15 @@ namespace ViTripWeb.Controllers
 {
     public class TourController : Controller
     {
+        private IConfiguration Configuration;
+        private string connectionString = string.Empty;
+
+        public TourController(IConfiguration _configuration)
+        {
+            Configuration = _configuration;
+            connectionString = this.Configuration.GetConnectionString("VitripDb");
+        }
+
         //[Route("du-lich-vietnam")]
         //[Route("du-lich-vietnam/{page}")]
         //public IActionResult Index(string page = "dong-tay-bac")
@@ -35,7 +45,7 @@ namespace ViTripWeb.Controllers
             List<TourDetailInclude> includes = new List<TourDetailInclude>();
             List<TourDetailExclude> excludes = new List<TourDetailExclude>();
 
-            using (var connection = new MySqlConnection("Server=10.1.144.4;Database=vitripdb;Uid=vitrip;Pwd=vitrip;;SslMode=none"))
+            using (var connection = new MySqlConnection(connectionString))
             {
                 tour = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE URL = 'an-tuong-vietnam/{tourUrl}'").FirstOrDefault();
                 relatedTours = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE groupId = {tour.GroupId} and id != {tour.Id}").ToList();
