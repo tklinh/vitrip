@@ -35,7 +35,7 @@ namespace ViTripWeb.Controllers
             List<TourDetailInclude> includes = new List<TourDetailInclude>();
             List<TourDetailExclude> excludes = new List<TourDetailExclude>();
 
-            using (var connection = new MySqlConnection("Server=localhost;Database=vitripdb;Uid=vitrip;Pwd=vitrip;;SslMode=none"))
+            using (var connection = new MySqlConnection("Server=10.1.144.4;Database=vitripdb;Uid=vitrip;Pwd=vitrip;;SslMode=none"))
             {
                 tour = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE URL = 'an-tuong-vietnam/{tourUrl}'").FirstOrDefault();
                 relatedTours = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE groupId = {tour.GroupId} and id != {tour.Id}").ToList();

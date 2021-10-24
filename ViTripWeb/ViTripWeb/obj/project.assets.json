@@ -961,11 +961,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Vitrip\\ViTripWeb\\ViTripWeb\\ViTripWeb.csproj",
+      "projectUniqueName": "E:\\Project\\ViTrip\\Code\\vitrip\\ViTripWeb\\ViTripWeb\\ViTripWeb.csproj",
       "projectName": "ViTripWeb",
-      "projectPath": "E:\\Vitrip\\ViTripWeb\\ViTripWeb\\ViTripWeb.csproj",
+      "projectPath": "E:\\Project\\ViTrip\\Code\\vitrip\\ViTripWeb\\ViTripWeb\\ViTripWeb.csproj",
       "packagesPath": "C:\\Users\\Kali\\.nuget\\packages\\",
-      "outputPath": "E:\\Vitrip\\ViTripWeb\\ViTripWeb\\obj\\",
+      "outputPath": "E:\\Project\\ViTrip\\Code\\vitrip\\ViTripWeb\\ViTripWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

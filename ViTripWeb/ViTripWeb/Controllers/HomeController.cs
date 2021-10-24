@@ -25,7 +25,7 @@ namespace ViTripWeb.Controllers
             List<AnTuongVietNam> catogories = new List<AnTuongVietNam>();
             List<TourDetail> tours = new List<TourDetail>();
 
-            using (var connection = new MySqlConnection("Server=localhost;Database=vitripdb;Uid=vitrip;Pwd=vitrip;SslMode=none"))
+            using (var connection = new MySqlConnection("Server=10.1.144.4;Database=vitripdb;Uid=vitrip;Pwd=vitrip;SslMode=none"))
             {
                 catogories = connection.Query<AnTuongVietNam>($"SELECT * FROM tbl_an_tuong_vietnam").ToList();
 
