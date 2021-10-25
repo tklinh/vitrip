@@ -14,24 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Views\AnTuongVietNam\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\da-nang\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\con_dao\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\ha-long\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\ly-son\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\ha-giang\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\my-tho-chau-doc\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\ly-son-17\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\ha-giang-19\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\binh-lieu\" />
     <Folder Include="wwwroot\images\an-tuong-vietnam\da-lat-21\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\nam-du-can-tho\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\moc-chau-24\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\ta-xua\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\phu-quoc\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\thac-ban-gioc\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\suoi-giang-mu-cang-chai\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\thung-nai-mai-chau\" />
-    <Folder Include="wwwroot\images\an-tuong-vietnam\quang-binh\" />
   </ItemGroup>
 
 </Project>
