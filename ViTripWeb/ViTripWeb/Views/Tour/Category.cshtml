@@ -1,0 +1,63 @@
+﻿@model ViTripWeb.Models.TourCategoryDto
+
+@{
+    ViewData["Title"] = Model.TourCategory.Title;
+}
+
+@section Banner
+{
+    <div class="d-flex align-items-center" style="background: url(../@Model.TourCategory.BannerImage) no-repeat; height: 650px">
+        <div class="container">
+            <h2 class="text-white d-flex justify-content-center font-weight-bold text-center font-40 text-uppercase pb-4">@Model.TourCategory.Title</h2>
+            <p class="text-white text-center">@Model.TourCategory.Description</p>
+        </div>
+    </div>
+}
+
+<main class="container py-5">
+    <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb bg-light pl-0 mb-0">
+            <li class="breadcrumb-item"><a href="/">Trang chủ </a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.TourCategory.Breadcrumb</li>
+        </ol>
+    </nav>
+    <section>
+        <div class="tour-content">
+            @{ int noRow = 0; }
+            @while (Model.Tours.Count > 0 && noRow < 3)
+            {
+                var rowItems = Model.Tours.Take(3);
+
+                <div class="row pt-4">
+                    @foreach (var tour in rowItems)
+                    {
+                        <div class="col-sm">
+                            <div class="card text-white" style="padding-bottom: 100%;">
+                                <img class="card-img square-image" src="~/@tour.ThumnailUrl" alt="Card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title mb-0">@tour.Name</h5>
+                                    <div><a href="~/@Model.TourCategory.URLPrefix/@(tour.Url + ".html")"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @if (rowItems.Count() < 3)
+                    {
+                        for (int i = rowItems.Count(); i < 3; i++)
+                        {
+                            <div class="col-sm"></div>
+                        }
+                    }
+                </div>
+
+                Model.Tours.RemoveRange(0, rowItems.Count());
+                noRow++;
+            }
+
+            <!-- end row -->
+            <div class="d-flex justify-content-center my-5">
+                <button class="btn btn-light border border-info px-4 view-all">Tất cả tour</button>
+            </div>
+        </div>
+    </section>
+</main>

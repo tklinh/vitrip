@@ -451,3 +451,7 @@ input[type=radio]:checked {
     object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
     object-position: center;
 }
+
+.active {
+    /*color: orangered;*/
+}

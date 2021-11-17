@@ -15,30 +15,26 @@
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item px-2">
-                    <a class="nav-link text-white" href="about-us.html">Về vitrip.me <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white" href="about-us.html">Về vitrip.Me <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle text-white" href="du-lich-viet-nam.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Du lịch Việt Nam
+                        Tour ngắn ngày - cuối tuần
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/du-lich-vietnam/dong-tay-bac">Đông Tây Bắc</a>
-                        <a class="dropdown-item" href="/du-lich-vietnam/bien-dao">Biển Đảo</a>
-                        <a class="dropdown-item" href="/du-lich-vietnam/tay-nguyen">Tây Nguyên</a>
-                        <a class="dropdown-item" href="/du-lich-vietnam/mien-tay">Miền Tây</a>
+                        <a class="dropdown-item" href="/du-lich-vietnam/dong-tay-bac">Miền Bắc</a>
+                        <a class="dropdown-item" href="/du-lich-vietnam/bien-dao">Miền Trung</a>
+                        <a class="dropdown-item" href="/du-lich-vietnam/tay-nguyen">Miền Nam</a>
                     </div>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link text-white" href="mice-tour.html">Mice Tour</a>
-                </li>
-                <!--<li class="nav-item  px-2">
-                    <a class="nav-link text-white" href="tra-cuu-booking.html">Tra cứu Booking</a>
-                </li>-->
-                <li class="nav-item  px-2">
-                    <a class="nav-link text-white" href="tin-tuc.html">Tin tức</a>
+                    <a class="nav-link text-white" href="mice-tour.html">MICE Tour</a>
                 </li>
                 <li class="nav-item  px-2">
-                    <a class="nav-link text-white" href="lien-he.html">Liên hệ</a>
+                    <a class="nav-link text-white" href="team-building.html">Team Building</a>
+                </li>
+                <li class="nav-item  px-2">
+                    <a class="nav-link text-white" href="tell-your-stories.html">Tell your stories</a>
                 </li>
             </ul>
             <div>
@@ -94,22 +90,21 @@
     <script src="./src/sdkzalo.js"></script>
 
 
-    <form action="tao-tour.html" class="align-top-12 container">
+    <div class="align-top-12 container">
         <h2 class="text-white d-flex justify-content-center font-weight-bold text-center font-40">
-            Tour thiết kế dành
-            riêng cho bạn
+            Gửi yêu cầu tư vấn
         </h2>
-        <select class="p-2 w-20 mx-auto my-4 bg-transparent-0 text-white d-flex justify-content-center border-white" id="birthday">
+        <!--<select class="p-2 w-20 mx-auto my-4 bg-transparent-0 text-white d-flex justify-content-center border-white" id="birthday">
             <option value="" hidden>Chọn địa điểm</option>
             <option class="text-secondary">Đông Tây Bắc</option>
             <option class="text-secondary">Biển Đảo</option>
             <option class="text-secondary">Tây Nguyên</option>
             <option class="text-secondary">Miền Tây</option>
-        </select>
+        </select>-->
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-warning btn-send-request text-white bg-orange">Gửi yêu cầu</button>
+            <a href="gui-yeu-cau-tu-van.html"><button type="submit" class="btn btn-warning btn-send-request text-white bg-orange">Gửi yêu cầu</button></a>
         </div>
-    </form>
+    </div>
 
     <div class="content">
         <div class="site-section bg-left-half mb-5">
@@ -163,7 +158,7 @@
 
                                 foreach (var category in Model.AnTuongVietNamList)
                                 {
-                                    <li data-target="#carouselImpressIndicators" data-slide-to="@index" class="active">@category.Title</li>
+                                    <li data-target="#carouselImpressIndicators" data-slide-to="@index" class="@((index == 0) ? "active" : "")">@category.Title</li>
                                     index++;
                                 }
                             }
@@ -187,15 +182,15 @@
                                                         <img class="card-img square-image" src="~/@tour.ThumnailUrl" alt="Card image">
                                                         <div class="card-img-overlay">
                                                             <h5 class="card-title mb-0">@tour.Name</h5>
-                                                            <div><a href="@tour.Url"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                                            <div><a href="~/@category.URLPrefix/@(tour.Url + ".html")"><button class="btn btn-read-more">Xem thêm</button></a></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             }
                                         </div>
-                                        
+
                                         @if (tours.Count > 3)
-                                        { 
+                                        {
                                             <div class="row">
                                                 @while (tourIndex < 6 && tourIndex < tours.Count)
                                                 {
@@ -207,25 +202,24 @@
                                                             <img class="card-img square-image" src="~/@tour.ThumnailUrl" alt="Card image">
                                                             <div class="card-img-overlay">
                                                                 <h5 class="card-title mb-0">@tour.Name</h5>
-                                                                <div><a href="@tour.Url"><button class="btn btn-read-more">Xem thêm</button></a></div>
+                                                                <div><a href="~/@category.URLPrefix/@(tour.Url + ".html")"><button class="btn btn-read-more">Xem thêm</button></a></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 }
                                             </div>
                                         }
-                                        
+
+                                        <div class="d-flex justify-content-center mt-4">
+                                            <a href="/@(category.URLPrefix + ".html")"><button class="btn btn-light border border-info px-4 view-all">Tất cả tour</button></a>
+                                        </div>
                                     </div>
                                 }
-                                isFirstGroup = false;
+                                isFirstGroup = false;                                
                             }
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="d-flex justify-content-center mt-4">
-                <button class="btn btn-light border border-info px-4 view-all">Tất cả tour</button>
             </div>
         </div>
     </div>

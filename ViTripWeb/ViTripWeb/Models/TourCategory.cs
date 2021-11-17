@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ViTripWeb.Models
 {
-    public class AnTuongVietNam
+    public class TourCategory
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -13,5 +13,7 @@ namespace ViTripWeb.Models
         public string Description { get; set; }
         public bool Active { get; set; }
         public string URLPrefix { get; set; }
+        public string BannerImage { get; set; }
+        public string Breadcrumb { get; set; }
     }
 }

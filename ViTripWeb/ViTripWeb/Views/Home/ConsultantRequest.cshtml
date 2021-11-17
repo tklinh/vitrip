@@ -1,0 +1,221 @@
+﻿@{
+    ViewData["Title"] = "Hướng dẫn thanh toán";
+}
+
+@section Banner
+{
+    <div class="banner-tao-tour d-flex align-items-center">
+        <div class="container">
+            <h2 class="text-white d-flex justify-content-center font-weight-bold text-center font-40 text-uppercase pb-4">khởi tạo tour du Lịch dành riêng của bạn</h2>
+        </div>
+    </div>
+}
+
+<main class="container py-5">
+    <!-- <nav class="nav py-2">
+        <a class="active text-dark" href="index.html">Trang chủ <i class="fas fa-chevron-right text-dark px-2"></i></a>
+        <a class="text-blue" href="#">Tạo tour du lịch</a>
+    </nav> -->
+    <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb bg-light pl-0 mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ </a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tạo tour du lịch</li>
+        </ol>
+    </nav>
+    <section class="py-4 form-create-tour">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group mb-4">
+                        <label for="destination" class="font-20 text-uppercase font-weight-bold">LOẠI THÔNG TIN</label>
+                        <select class="form-control border-orange" id="type">
+                            <option value="" hidden>Chọn loại thông tin</option>
+                            <option>Tour trong nước và quốc tế</option>
+                            <option>MICE Tour, Team Building, Event</option>
+                            <option>Phòng khách sạn, vé máy bay</option>
+                            <option>Thuê xe di chuyển, công tác trong và ngoài nước</option>
+                            <option>Hướng dẫn viên, phiên dịch viên</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="inputDeparture" class="font-20 text-uppercase font-weight-bold">Bạn đi từ đâu</label>
+                        <input type="text" class="form-control border-orange" id="inputDeparture" placeholder="Địa điểm khởi hành">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="destination" class="font-20 text-uppercase font-weight-bold">Địa điểm mong muốn</label>
+                        <select class="form-control border-orange" id="destination">
+                            <option value="" hidden>Chọn điểm đến</option>
+                            <option>Mộc Châu</option>
+                            <option>Cần Thơ</option>
+                            <option>Tây Nguyên</option>
+                            <option>Cát Bà</option>
+                            <option>Phú Quốc</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="tourMember" class="font-20 text-uppercase font-weight-bold">Thành viên tham gia</label>
+                        <div class="row d-flex justify-content-between align-items-start">
+                            <div class="col">
+                                <h6 class="font-weight-bold">Người lớn</h6>
+                                <p>Trên 12 tuổi</p>
+                            </div>
+                            <div class="col d-flex justify-content-between align-items-center">
+                                <img src="./images/tao-tour/minus.png" alt="">
+                                <input type="number" class="form-control mx-4 border-orange" id="formGroupExampleInput" placeholder="Số người" min="0" value="1">
+                                <img src="./images/tao-tour/plus.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-start">
+                            <div class="col">
+                                <h6 class="font-weight-bold">Trẻ em</h6>
+                                <p>Từ 2 đến 12 tuổi</p>
+                            </div>
+                            <div class="col d-flex justify-content-between align-items-center">
+                                <img src="./images/tao-tour/minus.png" alt="">
+                                <input type="number" class="form-control mx-4 border-orange" id="formGroupExampleInput" placeholder="Số người" min="0" value="0">
+                                <img src="./images/tao-tour/plus.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-between align-items-start">
+                            <div class="col">
+                                <h6 class="font-weight-bold">Trẻ nhỏ</h6>
+                                <p>Dưới 2 tuổi</p>
+                            </div>
+                            <div class="col d-flex justify-content-between align-items-center">
+                                <img src="./images/tao-tour/minus.png" alt="">
+                                <input type="number" class="form-control mx-4 border-orange" id="formGroupExampleInput" placeholder="Số người" min="0" value="0">
+                                <img src="./images/tao-tour/plus.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="tourTime" class="font-20 text-uppercase font-weight-bold">Thời gian</label>
+                        <p class="font-16">Ngày khởi hành</p>
+                        <input type="date" class="form-control border-orange" id="tourTime">
+                        <br>
+                        <label for="range">Số ngày đi</label>
+                        <div class="range-wrap">
+                            <div class="range-value" id="rangeV"></div>
+                            <input id="range" type="range" min="1" max="20" value="3" step="1">
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="moneyRange" class="font-20 text-uppercase font-weight-bold">Dự trù kinh phí</label>
+                        <select class="form-control border-orange" id="moneyRange">
+                            <option hidden>Chọn kinh phí</option>
+                            <option>2.000.000 - 5.000.000</option>
+                            <option>5.000.000 - 10.000.000</option>
+                            <option>10.000.000 - 15.000.000</option>
+                            <option>15.000.000 - 20.000.000</option>
+                            <option>Trên 20.000.000</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4 co-so-luu-tru">
+                        <label for="moneyRange" class="font-20 text-uppercase font-weight-bold">Cơ sở lưu trú</label>
+                        <div class="row ">
+                            <div class="form-check col text-center">
+                                <h6 class="font-weight-bold">Phổ thông</h6>
+                                <p class="">
+                                    <label for="threeStar">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </label>
+                                </p>
+                                <p class="d-flex justify-content-center"><input class="form-check-input m-0" type="radio" name="star" id="threeStar" value="option1"></p>
+                            </div>
+                            <div class="form-check col text-center">
+                                <h6 class="font-weight-bold">Tiêu chuẩn</h6>
+                                <p class="">
+                                    <label for="fourStar">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </label>
+                                </p>
+                                <p class="d-flex justify-content-center"><input class="form-check-input m-0" type="radio" name="star" id="fourStar" value="option1"></p>
+                            </div>
+                            <div class="form-check col text-center">
+                                <h6 class="font-weight-bold">Cao cấp</h6>
+                                <p class="">
+                                    <label for="fiveStar">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </label>
+                                </p>
+                                <p class="d-flex justify-content-center"><input class="form-check-input m-0" type="radio" name="star" id="fiveStar" value="option1"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group"><label for="" class="font-20 text-uppercase font-weight-bold">Thông tin liên hệ</label></div>
+                    <div class="form-group mb-4">
+                        <label for="inputInfo" class="">Họ và tên</label>
+                        <input type="text" class="form-control border-orange" id="inputInfo" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="inputEmail" class="">Email</label>
+                        <input type="email" class="form-control border-orange" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="inputPhone" class="">Số điện thoại</label>
+                        <input type="email" class="form-control border-orange" id="inputPhone" placeholder="0988123123">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="birthday" class="">Năm sinh</label>
+                        <select class="form-control border-orange" id="birthday">
+                            <option value="" hidden>Chọn năm sinh</option>
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="otherInfo" class="">Yêu cầu khác</label>
+                        <textarea class="form-control border-orange" id="otherInfo" rows="10"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <div>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Tôi đồng ý nhận tư vấn của chuyên gia qua Email
+                            </label>
+                        </div>
+                        <div>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                            <label class="form-check-label" for="defaultCheck2">
+                                Tôi đồng ý nhận thông tin về Tour Du Lịch qua Email hàng tháng
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <button type="submit" class="btn btn-warning btn-send-info text-white bg-orange">Gửi thông tin</button>
+            </div>
+        </form>
+    </section>    
+</main>
+
+@section Scripts {
+    <script>
+        const
+            range = document.getElementById('range'),
+            rangeV = document.getElementById('rangeV'),
+            setValue = () => {
+                const
+                    newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+                    newPosition = 10 - (newValue * 0.2);
+                rangeV.innerHTML = `<span>${range.value}</span>`;
+                rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+            };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+    </script>
+}

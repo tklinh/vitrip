@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using ViTripWeb.Models;
 
 namespace ViTripWeb.Controllers
@@ -32,7 +30,7 @@ namespace ViTripWeb.Controllers
 
             using (var connection = new MySqlConnection(connectionString))
             {
-                catogories = connection.Query<AnTuongVietNam>($"SELECT * FROM tbl_an_tuong_vietnam").ToList();
+                catogories = connection.Query<AnTuongVietNam>($"SELECT * FROM tbl_an_tuong_vietnam WHERE active=1 AND location=2").ToList();
 
                 tours = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE categoryId = 1").ToList();
             }
@@ -46,6 +44,31 @@ namespace ViTripWeb.Controllers
             return View(model);
         }
 
+        [Route("gui-yeu-cau-tu-van.html")]
+        public IActionResult ConsultantRequest()
+        {
+            return View();
+        }
+
+        [Route("huong-dan-thanh-toan.html")]
+        public IActionResult PaymentGuide()
+        {
+            return View();
+        }
+
+        [Route("ban-quyen-hinh-anh.html")]
+        public IActionResult LicenseGuide()
+        {
+            return View();
+        }
+
+        [Route("chuan-bi-truoc-chuyen-di.html")]
+        public IActionResult PreparationGuide()
+        {
+            return View();
+        }
+
+        [Route("chinh-sach-dieu-khoan.html")]
         public IActionResult Privacy()
         {
             return View();

@@ -15,6 +15,7 @@
   <ItemGroup>
     <Folder Include="Views\AnTuongVietNam\" />
     <Folder Include="wwwroot\images\an-tuong-vietnam\da-lat-21\" />
+    <Folder Include="wwwroot\images\NewFolder\" />
   </ItemGroup>
 
 </Project>
