@@ -116,3 +116,7 @@ E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\H
 E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\LicenseGuide.cshtml.g.cs
 E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\PreparationGuide.cshtml.g.cs
 E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\ConsultantRequest.cshtml.g.cs
+E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\MiceTour.cshtml.g.cs
+E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\TeamBuilding.cshtml.g.cs
+E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\TellYourStories.cshtml.g.cs
+E:\Project\ViTrip\Code\vitrip\ViTripWeb\ViTripWeb\obj\Debug\net5.0\Razor\Views\Home\AboutUs.cshtml.g.cs

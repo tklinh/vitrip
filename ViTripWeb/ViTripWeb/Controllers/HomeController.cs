@@ -44,6 +44,24 @@ namespace ViTripWeb.Controllers
             return View(model);
         }
 
+        [Route("mice-tour.html")]
+        public IActionResult MiceTour()
+        {
+            return View();
+        }
+
+        [Route("team-building.html")]
+        public IActionResult TeamBuilding()
+        {
+            return View();
+        }
+
+        [Route("tell-your-stories.html")]
+        public IActionResult TellYourStories()
+        {
+            return View();
+        }
+
         [Route("gui-yeu-cau-tu-van.html")]
         public IActionResult ConsultantRequest()
         {
@@ -70,6 +88,12 @@ namespace ViTripWeb.Controllers
 
         [Route("chinh-sach-dieu-khoan.html")]
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Route("about-us.html")]
+        public IActionResult AboutUs()
         {
             return View();
         }

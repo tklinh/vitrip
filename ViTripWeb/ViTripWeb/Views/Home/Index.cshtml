@@ -7,7 +7,7 @@
 
 <header>
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
-        <a class="navbar-brand" href="/"><img src="~/images/home/Logo.png" alt=""></a>
+        <a class="navbar-brand" href="/"><img src="~/images/home/Logo.png" alt="" id="logo"></a>
         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -215,7 +215,7 @@
                                         </div>
                                     </div>
                                 }
-                                isFirstGroup = false;                                
+                                isFirstGroup = false;
                             }
                         </div>
                     </div>
@@ -464,3 +464,24 @@
     </div>
     <!-- end partner -->
 </main>
+
+@section Scripts {
+    <script>
+        $(function () {
+            var header = $(".navbar");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 100) {
+                    header.removeClass('navbar-dark').addClass("navbar-light").addClass("bg-light").addClass("px-4");
+                    $(".nav-link").removeClass('text-white');
+                    $("#logo").attr("src", "images/dong-tay-bac/Logo.svg");
+                } else {
+                    header.removeClass("navbar-light").removeClass("bg-light").removeClass("px-4").addClass('navbar-dark');
+                    $(".nav-link").addClass('text-white');
+                    $("#logo").attr("src", "images/home/Logo.png");
+                }
+            });
+        });
+    </script>
+}
