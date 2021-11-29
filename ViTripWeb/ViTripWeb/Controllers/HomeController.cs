@@ -68,6 +68,14 @@ namespace ViTripWeb.Controllers
             return View();
         }
 
+        [Route("gui-yeu-cau-tu-van.html")]
+        [HttpPost]
+        public IActionResult ConsultantRequest(YeuCauTuVan request)
+        {
+
+            return View();
+        }
+
         [Route("huong-dan-thanh-toan.html")]
         public IActionResult PaymentGuide()
         {
