@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -65,15 +66,28 @@ namespace ViTripWeb.Controllers
         [Route("gui-yeu-cau-tu-van.html")]
         public IActionResult ConsultantRequest()
         {
-            return View();
+            return View(true);
         }
 
         [Route("gui-yeu-cau-tu-van.html")]
         [HttpPost]
         public IActionResult ConsultantRequest(YeuCauTuVan request)
         {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    string sqlQuery = "Insert Into tbl_yeu_cau_tu_van(typeId, `from`, `to`, adult, child, baby, date, duration, budget, name, email, phone, birthday, hotelLevel, note, receiveConsultByEmail, receiveNewsByEmail) Values(@TypeId, @From, @To, @Adult, @Child, @Baby, @Date, @Duration, @Budget, @Name, @Email, @Phone, @Birthday, @HotelLevel, @Note, @ReceiveConsultByEmail, @ReceiveNewsByEmail)";
 
-            return View();
+                    int rowsAffected = connection.Execute(sqlQuery, request);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            return View(false);
         }
 
         [Route("huong-dan-thanh-toan.html")]
