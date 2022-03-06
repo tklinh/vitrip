@@ -41,7 +41,7 @@ namespace VitripNew.Controllers
             using (var connection = new MySqlConnection(connectionString))
             {
                 tour = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE URL = '{tourUrl}'").FirstOrDefault();
-                //category = connection.Query<TourCategory>($"SELECT * FROM tbl_an_tuong_vietnam WHERE id = '{tour.GroupId}'").FirstOrDefault();
+                category = connection.Query<TourCategory>($"SELECT * FROM tbl_an_tuong_vietnam WHERE id = '{tour.GroupId}'").FirstOrDefault();
                 relatedTours = connection.Query<TourDetail>($"SELECT * FROM tbl_tour_detail WHERE groupId = {tour.GroupId} and id != {tour.Id}").ToList();
                 images = connection.Query<TourDetailImage>($"SELECT * FROM tbl_tour_detail_image WHERE tourId = {tour.Id}").ToList();
                 includes = connection.Query<TourDetailInclude>($"SELECT * FROM tbl_tour_detail_include WHERE tourId = {tour.Id}").ToList();
