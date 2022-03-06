@@ -69,6 +69,12 @@ namespace VitripNew.Controllers
             return View();
         }
 
+        [Route("tell-your-stories.html")]
+        public IActionResult TellYourStories()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
