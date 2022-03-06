@@ -1,0 +1,403 @@
+﻿@model AnTuongVietNamDto
+
+@{
+    ViewData["Title"] = "Vitrip.me";
+    Layout = "_LayoutIndex";
+}
+
+@section Menu
+{
+    <section class="header-area overlay scroll-menu">
+        <nav class="navbar navbar-expand-md navbar-dark fixtop">
+            <div class="container">
+                <a href="/">
+                    <img src="img/logo/Logo.png" alt="" />
+                </a>
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
+
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="active">
+                            <a href="/about-us.html" class="nav-item nav-link">Về Vitrip.me</a>
+                        </li>
+                        <li class="">
+                            <a href="antuongvn.html" class="nav-item nav-link">Tour ngắn ngày</a>
+                        </li>
+                        <li class="">
+                            <a href="/mice-tour.html" class="nav-item nav-link">MICE Tour</a>
+                        </li>
+                        <li class="">
+                            <a href="tao-tour.html" class="nav-item nav-link">Team Building</a>
+                        </li>
+                        <li class="">
+                            <a href="news.html" class="nav-item nav-link">Tell your stories</a>
+                        </li>
+                        <li class="">
+                            <a href="/lien-he.html" class="nav-item nav-link">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <div class="login">
+                        <div class="lang">
+                            <a href="#"><img src="img/icons/Icon metro-earth.png" alt="" /></a>
+                        </div>
+                        <div class="account" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal">
+                            <a href="#"><img src="img/icons/Group 329.png" alt="" /></a>
+                            <a href="#"><img src="img/icons/Icon material-account-circle.png" alt=""></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="header-area header-banner overlay">
+        <nav class="navbar navbar-expand-md navbar-dark fixtop">
+            <div class="container">
+                <a href="index.html"><img src="img/logo/Group 827.png" alt="" /></a>
+                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
+
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="active">
+                            <a href="/about-us.html" class="nav-item nav-link">Về Vitrip.me</a>
+                        </li>
+                        <li class="">
+                            <a href="antuongvn.html" class="nav-item nav-link">Tour ngắn ngày</a>
+                        </li>
+                        <li class="">
+                            <a href="/mice-tour.html" class="nav-item nav-link">MICE Tour</a>
+                        </li>
+                        <li class="">
+                            <a href="tao-tour.html" class="nav-item nav-link">Team Building</a>
+                        </li>
+                        <li class="">
+                            <a href="news.html" class="nav-item nav-link">Tell your stories</a>
+                        </li>
+                        <li class="">
+                            <a href="/lien-he.html" class="nav-item nav-link">Liên hệ</a>
+                        </li>
+                    </ul>
+
+                    <div class="login">
+                        <div class="lang-fixed">
+                            <a href="#"><img src="img/icons/Language.png" alt=""></i></a>
+                        </div>
+                        <div class="account-fixed" type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#exampleModal">
+                            <a href="#"><img src="img/icons/bars-home.png" alt=""></a>
+                            <a href="#"><img src="img/icons/account-circle.png" alt=""></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+}
+
+<section class="banner-imaged">
+    <div class="selector-tour text-center container">
+        <h2 style="font-weight:700;">Gửi yêu cầu tư vấn</h2>
+        <div class="button-register">
+            <button type="button" class="btn-register" style="cursor: pointer;" onclick="location.href='/gui-yeu-cau-tu-van.html'">Gửi yêu cầu</button>
+        </div>
+    </div>
+
+    <div class="slider-dd container">
+        <h4 class="text-center">Tour hot trong tháng</h4>
+        <div class="owl-carousel dd">
+            <div class="wrapper-imaged">
+                <img src="img/phuquoc.png" alt="" />
+                <p class="desc">Tour du lịch Chùa Hương</p>
+            </div>
+            <div class="wrapper-imaged">
+                <img src="img/phuquoc.png" alt="" />
+                <p class="desc">Tour du lịch Chùa Hương</p>
+            </div>
+            <div class="wrapper-imaged">
+                <img src="img/phuquoc.png" alt="" />
+                <p class="desc">Tour du lịch Chùa Hương</p>
+            </div>
+            <div class="wrapper-imaged">
+                <img src="img/phuquoc.png" alt="" />
+                <p class="desc">Tour du lịch Chùa Hương</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="impressive pt-5">
+    <div class="container">
+        <div class="title-impressive">
+            <h5>Ấn tượng Việt Nam</h5>
+            <p>Những địa điểm du lịch nổi tiếng tại Việt Nam mà bạn chắc chắc sẽ rất thích</p>
+        </div>
+        <div class="wrap-impressive">
+            <div class="list-group listPlace" id="list-tab" role="tablist">
+                @{
+                    bool isFirstTab = true;
+                    int index = 0;
+
+                    foreach (var category in Model.AnTuongVietNamList)
+                    {
+                        <a class="list-group-item list-group-item-action @(isFirstTab ? "active" : "") listGroupProject" id="tab-id-@(index)"
+                            data-toggle="list" href="#tab-@(index)" role="tab" aria-controls="tab-@(index)">@category.Name</a>
+
+                        isFirstTab = false;
+                        index++;
+                    }
+                }
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+                @{
+                    isFirstTab = true;
+                    index = 0;
+
+                    foreach (var category in Model.AnTuongVietNamList)
+                    {
+                        var tourIndex = 0;
+                        var tours = Model.Tours.Where(t => t.GroupId == category.Id).ToList();
+                        if (tours.Count > 0)
+                        {
+                            <div class="tab-pane fade @(isFirstTab ? "show active" : "")" id="tab-@(index)" role="tabpanel" aria-labelledby="tab-id-@(index)">
+                                <div class="multisteps-form">
+                                    <!--form panels-->
+                                    <div class="row mr-05">
+                                        @while (tourIndex < 3 && tourIndex < tours.Count)
+                                        {
+                                            var tour = tours[tourIndex];
+                                            tourIndex++;
+                                            var url = $"/{category.URLPrefix}/{tour.Url}.html";
+
+                                            <div class="col-md-4 pd-5">
+                                                <div class="wrap-place">
+                                                    <div class="image">
+                                                        <a href="@url">
+                                                            <img src="@tour.ThumnailUrl" alt="" />
+                                                        </a>
+                                                        <p class="address-tour">Từ @tour.From</p>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="title">
+                                                            <a href="@url">
+                                                                <p>@tour.Title</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="desc-infor">
+                                                            <div class="infor-trip">
+                                                                <p><i class="fa fa-calendar"></i> @tour.Schedule</p>
+                                                                <p><i class="fa fa-clock" aria-hidden="true"></i> @tour.Duration
+                                                                </p>
+                                                                <p class="price-trip">3.499.000₫/khách</p>
+                                                            </div>
+                                                            <div class="advise-customer">
+                                                                <a href="/gui-yeu-cau-tu-van.html?type=1"><span>Gửi yêu cầu tư vấn</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                        @while (tourIndex < 3)
+                                        {
+                                            tourIndex++;
+
+                                            <div class="col-md-4 pd-5"></div>
+                                        }
+                                    </div>
+                                    
+                                    @if (tours.Count > 3)
+                                    {
+                                        <div class="row mr-05">
+                                            @while (tourIndex < 6 && tourIndex < tours.Count)
+                                            {
+                                                var tour = tours[tourIndex];
+                                                tourIndex++;
+                                                var url = $"/{category.URLPrefix}/{tour.Url}.html";
+
+                                                <div class="col-md-4 pd-5">
+                                                    <div class="wrap-place">
+                                                        <div class="image">
+                                                            <a href="@url">
+                                                                <img src="@tour.ThumnailUrl" alt="" />
+                                                            </a>
+                                                            <p class="address-tour">Từ @tour.From</p>
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="title">
+                                                                <a href="@url">
+                                                                    <p>@tour.Title</p>
+                                                                </a>
+                                                            </div>
+                                                            <div class="desc-infor">
+                                                                <div class="infor-trip">
+                                                                    <p><i class="fa fa-calendar"></i> @tour.Schedule</p>
+                                                                    <p><i class="fa fa-clock" aria-hidden="true"></i> @tour.Duration
+                                                                    </p>
+                                                                    <p class="price-trip">3.499.000₫/khách</p>
+                                                                </div>
+                                                                <div class="advise-customer">
+                                                                    <a href="/gui-yeu-cau-tu-van.html"><span>Gửi yêu cầu tư vấn</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                            @while (tourIndex < 6)
+                                            {
+                                                tourIndex++;
+
+                                                <div class="col-md-4 pd-5"></div>
+                                            }
+                                        </div>
+                                    }
+
+                                    <div class="link-tour">
+                                        <a href="#">Tất cả Tour</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            isFirstTab = false;
+                            index++;
+                        }                        
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reason">
+    <div class="container reason-pd">
+        <div class="wrap-reason text-center">
+            <h5>Lí do nên chọn Vitrip.me</h5>
+            <div class="desc">
+                <p>
+                    Những lí do mà bạn hoàn toàn có thể yên tâm, khi chọn lựa
+                    Vitrip.me
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-reason text-center">
+                        <img src="img/icons/Group 943.png" alt="" />
+                        <h5>Địa điểm phù hợp</h5>
+                        <p>
+                            Với trên 10 năm kinh nghiệm làm du lịch, chúng tôi sẵn sàng
+                            tư vấn cho Quý Khách những điểm đến hợp lý và lịch trình phù
+                            hợp nhất cho quỹ thời gian của Quý Vị
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-reason text-center">
+                        <img src="img/icons/Group 944.png" alt="" />
+                        <h5>Chi phí hợp lý</h5>
+                        <p>
+                            Cung cấp mức giá hợp lý nhất với hành trình và dịch vụ tốt
+                            nhất trong khả năng. "Không có cách tiêu tiền nào tốt hơn là
+                            tiêu tiền đi du lịch."
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-reason text-center">
+                        <img src="img/icons/Group 945.png" alt="" />
+                        <h5>Triết lý hoạt động</h5>
+                        <p>
+                            Song hành cùng du khách với TÂM – TÍN – THIỆN Tâm: khách
+                            hàng là người thân, chuyến đi là giá trị Tín: uy tín trong
+                            từng dịch vụ, hợp lý trong từng sản phẩm Thiện: hướng thiện
+                            trong từng hành trình
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-reason text-center">
+                        <img src="img/icons/Group 943.png" alt="" />
+                        <h5>Địa điểm phù hợp</h5>
+                        <p>
+                            Với trên 10 năm kinh nghiệm làm du lịch, chúng tôi sẵn sàng
+                            tư vấn cho Quý Khách những điểm đến hợp lý và lịch trình phù
+                            hợp nhất cho quỹ thời gian của Quý Vị
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-reason text-center">
+                        <img src="img/icons/Group 944.png" alt="" />
+                        <h5>Chi phí hợp lý</h5>
+                        <p>
+                            Cung cấp mức giá hợp lý nhất với hành trình và dịch vụ tốt
+                            nhất trong khả năng. "Không có cách tiêu tiền nào tốt hơn là
+                            tiêu tiền đi du lịch."
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-reason text-center">
+                        <img src="img/icons/Group 945.png" alt="" />
+                        <h5>Triết lý hoạt động</h5>
+                        <p>
+                            Song hành cùng du khách với TÂM – TÍN – THIỆN Tâm: khách
+                            hàng là người thân, chuyến đi là giá trị Tín: uy tín trong
+                            từng dịch vụ, hợp lý trong từng sản phẩm Thiện: hướng thiện
+                            trong từng hành trình
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partner">
+    <div class="container">
+        <div class="wrap-partner text-center">
+            <h4>Khách hàng tiêu biểu</h4>
+            <div class="img-container-grid">
+                <div class="smallsquare">
+                    <img src="img/don-vi/Group 534.png" alt="">
+                </div>
+                <div class="smallsquare">
+                    <img src="img/don-vi/Group 543.png" alt="">
+                </div>
+                <div class="smallsquare">
+                    <img src="img/don-vi/Group 540.png" alt="">
+                </div>
+                <div class="smallsquare">
+                    <img src="img/don-vi/Group 542.png" alt="">
+                </div>
+                <div class="smallsquare">
+                    <img src="img/don-vi/Group 545.png" alt="">
+                </div>
+
+                <div class="bigsquare">
+                    <img src="img/don-vi/Group 552.png" alt="">
+                </div>
+                <div class="bigsquare">
+                    <img src="img/don-vi/Group 539.png" alt="">
+                </div>
+                <div class="bigsquare">
+                    <img src="img/don-vi/Group 536.png" alt="">
+                </div>
+                <div class="bigsquare">
+                    <img src="img/don-vi/Group 544.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

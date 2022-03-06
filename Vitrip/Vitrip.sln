@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitrip", "Vitrip.csproj", "{64FAD6C7-3E33-41CA-B2F8-178FF7F28945}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64FAD6C7-3E33-41CA-B2F8-178FF7F28945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FAD6C7-3E33-41CA-B2F8-178FF7F28945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FAD6C7-3E33-41CA-B2F8-178FF7F28945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FAD6C7-3E33-41CA-B2F8-178FF7F28945}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A587F9C-08DD-42AD-8B58-A3EF3540115B}
+	EndGlobalSection
+EndGlobal

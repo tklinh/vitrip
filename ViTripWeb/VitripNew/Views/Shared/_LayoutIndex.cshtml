@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VitripNew.me</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+</head>
+
+<body>
+    @RenderSection("Menu", false)
+
+    <section class="wrapper-vitrip">
+
+        @RenderBody()
+
+        <section class="footer">
+            <div class="container">
+                <div class="wrap-footer">
+                    <div class="logo-footer">
+                        <img src="~/img/logo/logo-footer.png" alt="" />
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="list-footer">
+                                <p class="ff-bold ">Công Ty Cổ Phần Dịch Vụ Truyền Thông & Du Lịch VITRIP</p>                                
+                                <div class="ft-icon">
+                                    <div class="imaged-icon">
+                                        <img src="~/img/icons/Icon feather-phone-call.png" alt="" />
+                                    </div>
+                                    <a href="#">
+                                        <p>09144525588</p>
+                                    </a>
+                                </div>
+                                <div class="ft-icon">
+                                    <div class="imaged-icon">
+                                        <img src="~/img/icons/Icon feather-mail.png" alt="" />
+                                    </div>
+                                    <a href="#">
+                                        <p>info@vittrip.me</p>
+                                    </a>
+                                </div>
+                                <div class="ft-icon">
+                                    <div class="imaged-icon">
+                                        <img src="~/img/icons/Icon ionic-md-paper.png" alt="" />
+                                    </div>
+                                    <a href="#">
+                                        <p>
+                                            Giấy phép ĐKKD
+                                            <br>
+                                            Giấy phép Dịch vụ Lữ Hành Quốc tế
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="list-footer">
+                                <a href="#">
+                                    <p class="font-weight-bold">Dành cho khách hàng</p>
+                                </a>
+                                <a href="#">
+                                    <p>Hướng dẫn mua hàng</p>
+                                </a>
+                                <a href="#">
+                                    <p>Hướng dẫn thanh toán</p>
+                                </a>
+                                <a href="#">
+                                    <p>Chuẩn bị trước chuyến đi</p>
+                                </a>
+                                <a href="#">
+                                    <p>Chính sách và điều khoản chung</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="list-footer">
+                                <a href="#">
+                                    <p class="font-weight-bold">
+                                        Đăng ký nhận ưu đãi từ Vitrip.me
+                                    </p>
+                                </a>
+                                <a href="#">
+                                    <p>
+                                        Nhập email của bạn, để nhận nhiều ưu đãi, và các chương
+                                        trình mới từ chúng tôi
+                                    </p>
+                                </a>
+                                <div class="input-mail">
+                                    <input type="email" id="email" name="email" placeholder="Email Address" />
+                                </div>
+                                <div class="button-send">
+                                    <button type="button" class="btn-send">Gửi cho tôi</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="list-footer">
+                                <a href="#">
+                                    <p class="font-weight-bold">Địa chỉ văn phòng</p>
+                                </a>
+                                <p>Trụ sở chính tại Hà Nội:</p>
+                                <div class="ft-icon">
+                                    <div class="imaged-icon">
+                                        <img src="~/img/icons/Icon material-location-on.png" alt="" />
+                                    </div>
+                                    <a href="#">
+                                        <p>B43 Lô 6, khu đô thị mới Định Công, Phường Định Công,
+                                            quận Hoàng Mai, Thành phố Hà Nội, Việt Nam.</p>
+                                    </a>
+                                </div>
+                                <a href="#">
+                                    <p class="font-weight-bold">Kết nối với chúng tôi</p>
+                                </a>
+                                <div class="btn-contact text-center">
+                                    <a href="#"><img src="~/img/icons/icon-fb.png" alt="" /></a>
+                                    <a href="#"><img src="~/img/icons/icon-yt.png" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="footer-bottom">
+                        <div class="bottom-roles">
+                            <a href="#"><span>© 2021 Vitrip.me</span></a>
+                            <a href="#"><span>Quyền riêng tư</span></a>
+                            <a href="#"><span>Điều khoản</span></a>
+                            <a href="#"><span>Sơ đồ trang web</span></a>
+                        </div>
+                        <div class="bottom-language">
+                            <img src="~/img/icons/Language.png" alt="" />
+                            <a href="#">Tiếng Việt(VN)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="button-contact text-center">
+            <div class="wrap-btn">
+                <img src="~/img/Mask-33.png" alt="" />
+                <div class="tel-zalo">
+                    <a href="#" target="_ablank">
+                        <img src="~/img/icons/Group 954.png" alt="" />
+                    </a>
+                </div>
+                <div class="tel-contact">
+                    <a href="tel:098722744">
+                        <img src="~/img/icons/Group 953.png" alt="" />
+                    </a>
+                </div>
+
+                <div class="tel-mail">
+                    <a href="#">
+                        <img src="~/img/icons/Group 952.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="container">
+                    <div class="modal-login">
+                        <div class="row">
+                            <div class="col-md-6 pd-0">
+                                <div class="dialog-img">
+                                    <img src="~/img/2 (1).png" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 pd-0">
+                                <div class="wrapper-login text-center">
+                                    <div class="logo-login">
+                                        <img src="~/img/logo/Logo.png" alt="" />
+                                    </div>
+                                    <h4>Chào mừng đến với VitripNew.me</h4>
+                                    <p>Vui lòng điền thông tin đăng nhập</p>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Tên đăng nhập hoặc email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Mật khẩu" />
+                                        </div>
+                                        <div class="dflex-modal">
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                                <label class="form-check-label" for="exampleCheck1">Lưu lại</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">
+                                                Đăng nhập
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div class="modal-pass">
+                                        <a href="#">Đổi mật khẩu</a> |
+                                        <a href="#">Lấy lại mật khẩu</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <script src="~/js/all.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-slim.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

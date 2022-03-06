@@ -5,7 +5,17 @@
       "ProjectGuid": "65398868-2d6f-4651-b80e-25e9d2358e63",
       "DisplayName": "ViTripWeb",
       "ColorIndex": 0
+    },
+    "3b792768-c9b0-4ec1-b86e-ca8158e50d4c": {
+      "ProjectGuid": "3b792768-c9b0-4ec1-b86e-ca8158e50d4c",
+      "DisplayName": "VitripNew",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

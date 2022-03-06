@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+@section Menu
+{
+<section class="header-area overlay fixed-menu">
+    <nav class="navbar navbar-expand-md navbar-dark fixtop">
+        <div class="container">
+            <a href="/">
+                <img src="~/img/logo/Logo.png" alt="" />
+            </a>
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+            </button>
+
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="active">
+                        <a href="/about-us.html" class="nav-item nav-link">Về Vitrip.me</a>
+                    </li>
+                    <li class="">
+                        <a href="antuongvn.html" class="nav-item nav-link">Tour ngắn ngày</a>
+                    </li>
+                    <li class="">
+                        <a href="/mice-tour.html" class="nav-item nav-link">MICE Tour</a>
+                    </li>
+                    <li class="">
+                        <a href="tao-tour.html" class="nav-item nav-link">Team Building</a>
+                    </li>
+                    <li class="">
+                        <a href="news.html" class="nav-item nav-link">Tell your stories</a>
+                    </li>
+                    <li class="">
+                        <a href="/lien-he.html" class="nav-item nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="login">
+                    <div class="lang">
+                        <a href="#"><img src="~/img/icons/Icon metro-earth.png" alt="" /></a>
+                    </div>
+                    <div class="account" type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#exampleModal">
+                        <a href="#"><img src="~/img/icons/Group 329.png" alt="" /></a>
+                        <a href="#"><img src="~/img/icons/Icon material-account-circle.png" alt=""></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+}
+
+@RenderBody()
+
+@await RenderSectionAsync("Scripts", required: false)
