@@ -16,6 +16,18 @@ namespace VitripNew.Controllers
             connectionString = this.Configuration.GetConnectionString("VitripDb");
         }
 
+        [Route("tour-ngan-ngay.html")]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [Route("team-building.html")]
+        public IActionResult TeamBuilding()
+        {
+            return View();
+        }
+
         [Route("{tourCategory}/{tourUrl}.html")]
         public IActionResult Detail(string tourCategory, string tourUrl)
         {
